@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'slim-rails', '~> 3.2'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
