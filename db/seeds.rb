@@ -39,11 +39,64 @@ Category.create!(
   title: 'Ruby'
   )
 puts '1 ruby category created'
+
 Category.create!(
   title: 'General'
   )
 puts '1 general category created'
+
 Category.create!(
   title: 'Rails'
   )
 puts '1 rails category created'
+
+Article.create!(
+  title: 'Ruby News',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 1,
+  category_id: 1
+)
+
+Article.create!(
+  title: 'General News',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 2,
+  category_id: 2
+)
+Article.create!(
+  title: 'Rails News',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 1,
+  category_id: 3
+)
+Article.create!(
+  title: 'Ruby News',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 2,
+  category_id: 1
+)
+puts '4 articles created'
