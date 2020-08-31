@@ -3,3 +3,23 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @import 'bootstrap';
+
+body {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  display: flex;
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.page-title {
+  font-size: 2.25rem;
+  font-weight: bolder;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+}

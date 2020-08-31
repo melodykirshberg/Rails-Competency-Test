@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsCompetencyTest</title>
+    <title>Rails Competency Test</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,10 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class= "header">
+    <a class="page-title col-md-8" href="/"> Articles </a>
+    <a class="col-md-4"<%= login_helper %></div>
+  </nav>  
   <body>
-    <%= login_helper %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <%= link_to 'Back', root_path %>
   </body>
 </html>

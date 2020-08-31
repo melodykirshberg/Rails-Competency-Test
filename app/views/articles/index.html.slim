@@ -1,23 +1,29 @@
-h1 Listing articles
+h5 Listing articles
 
+- if current_user.has_roles?(:admin)
+  = link_to 'New Article', new_article_path
 table
   thead
     tr
       th Title
       th Content
-      th
-      th
-      th
+      th Category
+      th User
+      th Show
+      - if current_user.has_roles?(:admin)
+        th Edit 
+        th Delete
 
   tbody
     - @articles.each do |article|
       tr
         td = article.title
         td = article.content
+        td = article.category_id
+        td = article.user_id
         td = link_to 'Show', article
-        td = link_to 'Edit', edit_article_path(article)
-        td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
+        - if current_user.has_roles?(:admin)
+          td = link_to 'Edit', edit_article_path(article)
+          td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
-
-= link_to 'New Article', new_article_path

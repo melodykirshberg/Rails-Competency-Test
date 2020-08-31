@@ -25,6 +25,16 @@ User.create!(
 
 puts '1 admin user created'
 
+User.create!(
+  name: 'Sadmin User',
+  email: 'sadmin@user.com',
+  password: 'password',
+  password_confirmation: 'password',
+  roles: "admin"
+)
+
+puts '1 Sadmin user created :('
+
 Category.create!(
   title: 'Ruby'
   )

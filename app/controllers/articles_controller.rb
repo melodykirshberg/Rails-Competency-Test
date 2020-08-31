@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  before_action :owned_articles, only:[:edit, :update, :destroy]
+  access all: [:index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.last(3)
   end
 
   # GET /articles/1
@@ -26,7 +27,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
+    
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -70,6 +71,10 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :content, :category_id)
+      params.require(:article).permit(:title, :content, :category_id, :user_id)
+    end
+
+    def owned_articles
+      redirect_to root_path, notice: "You did not create this" unless @article.user_id == current_user.id
     end
 end
