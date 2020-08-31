@@ -61,6 +61,10 @@ GEM
     autoprefixer-rails (9.8.6.3)
       execjs
     bcrypt (3.1.15)
+    better_errors (2.7.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -79,6 +83,7 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    coderay (1.1.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     devise (4.7.2)
@@ -229,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5, >= 4.5.2)
   byebug
