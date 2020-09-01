@@ -51,7 +51,7 @@ Category.create!(
 puts '1 rails category created'
 
 Article.create!(
-  title: 'Ruby News',
+  title: 'Ruby News 1',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
   elit, sed do eiusmod tempor incididunt ut labore et dolore 
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -64,7 +64,58 @@ Article.create!(
 )
 
 Article.create!(
-  title: 'General News',
+  title: 'Ruby News 2',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 2,
+  category_id: 1
+)
+
+Article.create!(
+  title: 'Ruby News 3',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 2,
+  category_id: 1
+)
+Article.create!(
+  title: 'Ruby News 4',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 3,
+  category_id: 1
+)
+puts '4 ruby articles created'
+
+Article.create!(
+  title: 'General News 1',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 3,
+  category_id: 2
+)
+Article.create!(
+  title: 'General News 2',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
   elit, sed do eiusmod tempor incididunt ut labore et dolore 
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -76,7 +127,34 @@ Article.create!(
   category_id: 2
 )
 Article.create!(
-  title: 'Rails News',
+  title: 'General News 3',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 1,
+  category_id: 2
+)
+Article.create!(
+  title: 'General News 4',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 2,
+  category_id: 2
+)
+
+puts '4 general articles created'
+
+Article.create!(
+  title: 'Rails News 1',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
   elit, sed do eiusmod tempor incididunt ut labore et dolore 
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -88,7 +166,7 @@ Article.create!(
   category_id: 3
 )
 Article.create!(
-  title: 'Ruby News',
+  title: 'Rails News 2',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
   elit, sed do eiusmod tempor incididunt ut labore et dolore 
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -97,6 +175,30 @@ Article.create!(
   dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
   non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   user_id: 2,
-  category_id: 1
+  category_id: 3
 )
-puts '4 articles created'
+Article.create!(
+  title: 'Rails News 3',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 3,
+  category_id: 3
+)
+Article.create!(
+  title: 'Rails News 4',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing 
+  elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+  aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  user_id: 1,
+  category_id: 3
+)
+puts '4 rails articles created'

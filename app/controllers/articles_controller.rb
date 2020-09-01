@@ -6,7 +6,9 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.last(3)
+    @articles = Article.all.where(:category_id => [1..3]).last(3) +
+      Article.where(:category_id => 2).last(3) +
+      Article.where(:category_id => 3).last(3)
   end
 
   # GET /articles/1
