@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+
+.card-body {
+  width: fit-content;
+  align-self: center;
+}
+
+.field label, em {
+  display: flex
+}
+
+.remember {
+  display: flex
+}
+
+.rl {
+  padding-left: 10px
+}
+
+.pr {
+  display: inline-flex;
+}
+
+label.pr-label {
+  padding-right: 10px
+  }

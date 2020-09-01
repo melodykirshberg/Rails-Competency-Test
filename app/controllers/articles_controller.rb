@@ -14,6 +14,9 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    if current_user.is_a?(GuestUser)
+      redirect_to new_user_registration_path, notice: "Please login to continue reading"
+    end
   end
 
   # GET /articles/new

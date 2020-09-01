@@ -21,6 +21,30 @@ body {
 .page-title {
   font-size: 2.25rem;
   font-weight: bolder;
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+  font-family: Georgia, "Times New Roman", serif;
+  color: #343a40 !important;
 }
 
+.article-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+
+.content {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+p em {
+  font-weight: bolder;
+}
+
+.article-category {
+  display: inline-flex
+}
+
+.article-link a {
+  float: right;
+  font-style: italic;
+  letter-spacing: 1px;
+}

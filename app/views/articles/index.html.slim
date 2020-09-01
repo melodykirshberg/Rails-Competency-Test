@@ -1,16 +1,23 @@
 .container
   - if current_user.has_roles?(:admin)
     = link_to 'New Article', new_article_path
-
+  
   - @articles.each do |article|
-    h3 
-      = link_to "#{article.title}", article
-    p 
-      | By 
-      = article.user.first_name
-    p = article.content[0..250] + '...'
-    a = link_to 'Continue reading', article
-    p 
-      | #
-      = article.category.title
-br
+    .card.article-card
+      .card-body
+        h3.card-title.article-title
+          = link_to "#{article.title}", article
+        p.card-subtitle.content
+          = distance_of_time_in_words(article.created_at, Time.now).capitalize + ' ago '
+          | By 
+          em = article.user.first_name
+        p.card-text
+          = article.content[0..650] + '...'
+        .footer         
+          .card-text.article-category 
+            p
+              = '#' + article.category.title
+          .card-link.article-link 
+            a 
+              = link_to 'Continue reading...', article
+    br
