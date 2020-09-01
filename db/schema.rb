@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_204400) do
+ActiveRecord::Schema.define(version: 2020_09_01_065646) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2020_08_31_204400) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_dashboards_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -45,4 +52,5 @@ ActiveRecord::Schema.define(version: 2020_08_31_204400) do
 
   add_foreign_key "articles", "categories"
   add_foreign_key "articles", "users"
+  add_foreign_key "dashboards", "users"
 end

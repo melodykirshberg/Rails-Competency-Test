@@ -1,0 +1,22 @@
+table
+  thead
+    tr
+      th ID
+      th Date Created
+      th Name
+      th Email 
+      th Roles
+      th Actions
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.id
+        td = time_ago_in_words(user.created_at) + ' ago'
+        td = user.name
+        td = user.email
+        td = user.roles
+
+br
+
+= link_to 'New User ', new_dashboard_path

@@ -35,6 +35,14 @@ User.create!(
 
 puts '1 Sadmin user created :('
 
+User.create!(
+  name: 'Editor User', 
+  email: "editor@user.com", 
+  password: 'password', 
+  password_confirmation: "password",
+  roles: "editor"
+)
+
 Category.create!(
   title: 'Ruby'
   )
