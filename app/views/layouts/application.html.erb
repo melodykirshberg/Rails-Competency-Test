@@ -9,14 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <nav class= "header">
-    <a class="page-title col-md-8" href="/"> Articles </a>
-    <a class="col-md-4"<%= login_helper %></div>
-  </nav>  
   <body>
+  <div class= "header">
+    <div><a class="page-title" href="/"> Articles </a></div>
+    <div><%= login_helper %></div><br />
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+  </div>  
     <%= yield %>
-    <%= link_to 'Back', root_path %>
   </body>
 </html>
