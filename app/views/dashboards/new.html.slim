@@ -1,5 +1,7 @@
-h1 New dashboard
-
-== render 'form'
-
-= link_to 'Back', dashboards_path
+.container
+  .row
+    .col-md-9
+      => link_to 'Back', dashboards_path, class: 'btn btn-sm btn-outline-secondary'
+    .col-md-3
+      h4 New User
+  == render 'form'

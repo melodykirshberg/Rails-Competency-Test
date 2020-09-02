@@ -27,5 +27,8 @@
           label Password Confirmation 
           = f.password_field :password_confirmation, autocomplete: "new-password" 
 
+        .field
+          label Roles
+          = f.select :roles, User::ROLES, {multiple: true}
         .actions
           = f.submit "Sign up", class: 'float-right btn btn-sm btn-outline-primary'

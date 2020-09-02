@@ -9,12 +9,13 @@
 }
 
 table {
-  width: 650px;
+  table-layout: fixed;
+  width: 100%;
 }
 
 tr {
   td {
-  padding: 35px 0 50px;
+  padding: 35px 0 30px 0;
   border-bottom: lightgray solid;
   }
 }

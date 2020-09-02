@@ -8,6 +8,7 @@
           th Created
           th Email
           th Roles
+          th Action
       tbody
         - @users.each do |user|
           tr
@@ -28,5 +29,7 @@
                 .roles
                   i.fa.fa-cog alt="Admin"
                   |  Admin
+            td 
+              => link_to 'Edit', edit_user_registration_path(user), class: 'btn btn-sm btn-outline-secondary'
   br
 br
