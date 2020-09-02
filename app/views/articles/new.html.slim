@@ -1,4 +1,7 @@
-h5 New article
-
-== render 'form'
-
+.container
+  .row
+    .col-md-9
+      => link_to 'Back', root_path, class: 'btn btn-sm btn-outline-secondary'
+    .col-md-3
+      h4  New Article
+  == render 'form'

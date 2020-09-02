@@ -25,6 +25,10 @@ body {
   color: #343a40 !important;
 }
 
+.article-card {
+  flex-direction: inherit;
+}
+
 .article-title {
   margin-bottom: .25rem;
   font-size: 2.5rem;
@@ -33,10 +37,12 @@ body {
 .content {
   margin-bottom: 1.25rem;
   color: #999;
+  display: inline-flex;
 }
 
 p em {
   font-weight: bolder;
+  padding-left: 3px;
 }
 
 .article-category {
@@ -47,4 +53,29 @@ p em {
   float: right;
   font-style: italic;
   letter-spacing: 1px;
+}
+
+.na-id {
+  float: right;
+}
+
+.na-body {
+  padding: 35px
+}
+
+.na-cont textarea {
+  width: -webkit-fill-available;
+  height: 300px;
+}
+
+.show {
+  margin-top: 15px;
+}
+
+.row {
+  padding: 15px 15px;
+}
+
+.col-md-2 {
+  text-align: right;
 }

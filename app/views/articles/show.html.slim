@@ -1,18 +1,22 @@
-.container
-  p#notice = notice
+.container 
+  .card-body
+    => link_to 'Back', root_path, class: 'btn btn-sm btn-outline-secondary'
+    - if current_user.has_roles?(:editor) && current_user.id == @article.user.id
+      .float-right
+        => link_to 'Edit', edit_article_path(@article), class: 'btn btn-sm btn-outline-secondary'
+        => link_to 'Destroy', @article, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-sm btn-outline-secondary' 
+    br
+    h3.card-title.article-title.show
+      = @article.title
+    p.card-subtitle.content.float-right
+      = distance_of_time_in_words(@article.created_at, Time.now).capitalize + ' ago by  '
+      em = @article.user.first_name
+    br
+    br
+    p.card-text
+      = @article.content
+    .footer
+      .card-text.article-category
+        em = ' #' + @article.category.title
+        
 
-  - if current_user.has_roles?(:admin)
-    => link_to 'Edit', edit_article_path(@article)
-    => link_to 'Destroy', @article, data: { confirm: 'Are you sure?' }, method: :delete
-  h3
-    = @article.title
-  p
-    | By 
-    = @article.user.first_name
-  p
-    | #
-    = @article.category.title
-  p
-    = @article.content
-
-  => link_to 'Back', root_path 

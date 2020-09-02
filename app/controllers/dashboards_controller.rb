@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
+  before_action :authorize_admin, only: :create
   before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
   access admin: [:index, :show, :new, :edit, :create, :update]
 
@@ -22,7 +23,7 @@ class DashboardsController < ApplicationController
 
   # POST /dashboards
   def create
-    @dashboard = Dashboard.new(dashboard_params)
+    @dashboard = User.new(dashboard_params)
 
     if @dashboard.save
       redirect_to @dashboard, notice: 'Dashboard was successfully created.'
@@ -54,17 +55,11 @@ class DashboardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dashboard_params
-      params[:dashboard]
+      params.require(:dashboard)
     end
 
-  def redirect_unless_admin
-    unless current_user.try(:admin?)
-      flash[:error] = "Only admins can do that"
-      redirect_to root_path
-    end
-  end
-
-  def sign_up(resource_name, resource)
-    true
+   def authorize_admin
+    return unless !current_user.has_role?(:admin)
+    redirect_to root_path, alert: 'Admins only!'
   end
 end

@@ -10,39 +10,56 @@ User.create!(
   name: 'Normal User', 
   email: "normal@user.com", 
   password: 'password', 
-  password_confirmation: "password"
+  password_confirmation: "password",
+  id: 1
 )
 
 puts '1 normal user created'
 
-User.create!(
-  name: 'Admin User',
-  email: 'admin@user.com',
-  password: 'password',
-  password_confirmation: 'password',
-  roles: "admin"
-)
-
-puts '1 admin user created'
 
 User.create!(
   name: 'Sadmin User',
   email: 'sadmin@user.com',
   password: 'password',
   password_confirmation: 'password',
-  roles: "admin"
+  roles: "admin",
+  id: 2
 )
 
 puts '1 Sadmin user created :('
+
+User.create!(
+  name: 'Rails Editor',
+  email: 'reditor@user.com',
+  password: 'password',
+  password_confirmation: 'password',
+  roles: "editor",
+  id: 3
+)
+
+puts '1 rails editor created'
 
 User.create!(
   name: 'Editor User', 
   email: "editor@user.com", 
   password: 'password', 
   password_confirmation: "password",
-  roles: "editor"
+  roles: "editor",
+  id: 4
 )
 
+puts '1 editor created'
+
+User.create!(
+  name: 'Ruby Editor',
+  email: 'rbeditor@user.com',
+  password: 'password',
+  password_confirmation: 'password',
+  roles: 'editor',
+  id: 5
+)
+
+puts '1 ruby editor created'
 Category.create!(
   title: 'Ruby'
   )
@@ -88,7 +105,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum et.',
-  user_id: 1,
+  user_id: 5,
   category_id: 1
 )
 
@@ -120,7 +137,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 2,
+  user_id: 4,
   category_id: 1
 )
 
@@ -152,7 +169,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 2,
+  user_id: 3,
   category_id: 1
 )
 Article.create!(
@@ -183,7 +200,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',  
-  user_id: 3,
+  user_id: 4,
   category_id: 1
 )
 puts '4 ruby articles created'
@@ -216,7 +233,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 3,
+  user_id: 5,
   category_id: 2
 )
 Article.create!(
@@ -247,7 +264,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 2,
+  user_id: 3,
   category_id: 2
 )
 Article.create!(
@@ -278,7 +295,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 1,
+  user_id: 4,
   category_id: 2
 )
 Article.create!(
@@ -309,7 +326,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',  
-  user_id: 2,
+  user_id: 5,
   category_id: 2
 )
 
@@ -343,7 +360,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 1,
+  user_id: 4,
   category_id: 3
 )
 Article.create!(
@@ -374,7 +391,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 2,
+  user_id: 3,
   category_id: 3
 )
 Article.create!(
@@ -405,7 +422,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 3,
+  user_id: 4,
   category_id: 3
 )
 Article.create!(
@@ -436,7 +453,7 @@ Article.create!(
   sagittis nisl. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut faucibus 
   pulvinar elementum integer enim. Platea dictumst vestibulum rhoncus est pellentesque elit 
   ullamcorper. Magna ac placerat vestibulum lectus mauris ultrices. Augue neque gravida in fermentum ',
-  user_id: 1,
+  user_id: 5,
   category_id: 3
 )
 puts '4 rails articles created'

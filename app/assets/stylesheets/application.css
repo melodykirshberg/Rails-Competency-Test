@@ -15,9 +15,39 @@
  */
 @import 'bootstrap';
 
+a:hover {
+  background-color: transparent;
+  color: slategray;
+  text-decoration: none;
+}
+
+body {
+  background-color: ghostwhite;
+  margin: 0;
+  margin-top: 45px;
+}
+
+.container {
+  background-color: white;
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.card-link {
+  float: right;
+}
+
 .card-body {
   width: fit-content;
   align-self: center;
+  padding: 35px
+}
+
+.card-subtitle {
+  padding-bottom: 15px
 }
 
 .field label, em {
@@ -38,4 +68,5 @@
 
 label.pr-label {
   padding-right: 10px
-  }
+}
+

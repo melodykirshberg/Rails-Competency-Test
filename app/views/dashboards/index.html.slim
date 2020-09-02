@@ -1,22 +1,32 @@
-table
-  thead
-    tr
-      th ID
-      th Date Created
-      th Name
-      th Email 
-      th Roles
-      th Actions
-
-  tbody
-    - @users.each do |user|
-      tr
-        td = user.id
-        td = time_ago_in_words(user.created_at) + ' ago'
-        td = user.name
-        td = user.email
-        td = user.roles
-
+.container 
+  .card-body
+    table
+      thead
+        tr
+          th ID
+          th Name
+          th Created
+          th Email
+          th Roles
+      tbody
+        - @users.each do |user|
+          tr
+            td = user.id
+            td = user.name
+            td = time_ago_in_words(user.created_at) + ' ago' 
+            td = user.email
+            td 
+              - if user.has_roles?(:user)
+                .roles
+                  i.fa.fa-user alt="User" 
+                  |  User
+              - if user.has_roles?(:editor)
+                .roles
+                  i.fa.fa-pencil alt="Editor"
+                  |  Editor
+              - if user.has_roles?(:admin)
+                .roles
+                  i.fa.fa-cog alt="Admin"
+                  |  Admin
+  br
 br
-
-= link_to 'New User ', new_dashboard_path
