@@ -1,7 +1,8 @@
-h5 Editing article
-
-== render 'form'
-
-=> link_to 'Show', @article
-'|
-
+.container
+  .row
+    .col-md-8
+      => link_to 'Back', root_path, class: 'btn btn-sm btn-outline-secondary'
+      => link_to 'Show', @article, class: 'btn btn-sm btn-outline-secondary'
+    .col-md-4
+      h4 Editing Article
+  == render 'form'
