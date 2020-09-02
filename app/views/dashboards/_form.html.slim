@@ -1,5 +1,5 @@
 .container
-  = form_for User.new, url: create_user_path do |f|
+  = form_for User.new, url: user_registration_path do |f|
     .card.article-card
       - if @dashboard.errors.any?
         #error_explanation

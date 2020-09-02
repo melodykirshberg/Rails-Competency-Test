@@ -1,5 +1,4 @@
 class DashboardsController < ApplicationController
-  before_action :authorize_admin, only: :create
   before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
   access admin: [:index, :show, :new, :edit, :create, :update]
 
@@ -58,8 +57,4 @@ class DashboardsController < ApplicationController
       params.require(:dashboard)
     end
 
-   def authorize_admin
-    return unless !current_user.has_role?(:admin)
-    redirect_to root_path, alert: 'Admins only!'
-  end
 end
