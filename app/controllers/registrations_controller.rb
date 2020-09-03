@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :redirect_unless_admin,  only: [:new, :create]
   skip_before_action :require_no_authentication
 
   def index

@@ -70,3 +70,11 @@ label.pr-label {
   padding-right: 10px
 }
 
+.col-md-4 h4 {
+  text-align: right;
+}
+
+.delete {
+  text-align: center;
+  padding-top: 5%;
+}
